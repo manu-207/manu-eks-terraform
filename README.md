@@ -1,2 +1,1 @@
-# manu-eks-terraform
-terraform module for creation of vpc and eks and Rds etc...
+# aws-vpc-network-terraform
