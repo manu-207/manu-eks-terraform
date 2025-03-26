@@ -19,6 +19,10 @@ resource "aws_eks_node_group" "ubuntu_22_ngp" {
     max_unavailable = 2
   }
 
+  tags = {
+    "Name" = "eks-node-${var.node_group_name}"  # Assigns a name to EC2 instances in the node group
+  }
+
   depends_on = [
     aws_iam_role.node_role,
     aws_iam_role_policy_attachment.node_policy_attach
